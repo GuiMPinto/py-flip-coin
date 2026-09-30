@@ -1,9 +1,7 @@
 import random
 
 
-result = random.choice(["heads", "tails"])
-
-def flip_coin():
+def flip_coin() -> dict:
     counts = [0] * 11
     for _ in range(10000):
         heads = 0
@@ -17,4 +15,3 @@ def flip_coin():
         percentages[heads] = round((count / 10000) * 100, 2)
 
     return percentages
-
